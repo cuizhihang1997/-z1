@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            /* width: 400px; */
+            height: 400px;
+            background: #000 url() no-repeat left top;
+            /* 建议 缩写 写在前边 */
+            background-color: red;
+            /* 图片路径 */
+            background-image: url(img/avatar.jpg);
+            /* 平铺方式 */
+            /* repeat-x  repeat-y */
+            background-repeat: no-repeat;
+            /* 位置  */
+            /* 第一个值:水平方向 left/center/right*/
+            /* 第二个值 垂直方向 top/center/bottom*/
+            /* 如果不写第二个值  默认 为 center */
+            background-position: right top;
+            /* 具体的像素值  第一个指的 水平  距离盒子左侧的  像素值
+            第二个   距离盒子顶部的  像素值 */
+            /* background-position: -100px -100px; */
+            /* 百分数 */
+            /* background-position: 50% 50%; */
+            /* background-attachment: fixed; (此时相对于body(视口)定位,不会随着网页滚动) */
+
+            /* 缩写 */
+            /* background: #000 url() no-repeat left top  scroll; */
+
+        }
+
+        .footer {
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/avatar.jpg" alt="">
+    <p>不凡学院</p>
+
+    <!-- 背景图片 想展示出来 需要有一个 容器 (联系背景色)-->
+    <div class="box">
+
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+
+</html>

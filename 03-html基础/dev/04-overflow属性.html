@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* overflow  用来处理超出部分 如何展示 */
+
+            /* 超出部分隐藏 */
+            /* overflow: hidden; */
+            /* 根据超出情况   自动添加滚动条 */
+            /* overflow: auto; */
+            /* 两个方向都加滚动条 */
+            overflow: scroll;
+        }
+
+        p {
+            width: 100px;
+            background-color: green;
+            /* 宽度有限 */
+            /* 不能换行 */
+            /* 超出打点 */
+            /* 超出部分隐藏 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        不凡学院不凡学院不凡学院不凡学院不凡学院不凡学院不凡学院不凡学院不凡学院不凡学院不凡学院
+    </div>
+    <p>不凡学院不凡学院不凡学院不凡学院</p>
+</body>
+
+</html>

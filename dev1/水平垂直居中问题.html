@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 单行文本  垂直水平居中    */
+
+        /* 行内块元素   水平居中  给父类 设置 text-align:center; */
+
+        /* 块级元素  水平居中   margin: 0  auto; */
+
+
+        /* 块级元素  水平垂直居中 */
+
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+
+        /* 盒子宽高  确定 */
+        /* .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        } */
+
+
+        /* 宽高 不定 */
+        /* 对元素进行位移  旋转  拉伸 */
+        /* 50% 相对于自身 */
+        /* margin-left:-50%;  相对于 父类 宽度 */
+        /* .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            
+            transform: translate(-50%, -50%);
+            
+            background-color: green;
+        } */
+
+        /* 盒子 宽高 确定 */
+        .center {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background-color: green;
+            transition: all ease 3s;
+        }
+
+        .box:hover .center {
+
+            /* 菱形 */
+            transform: rotate(135deg);
+        }
+
+        /* flex布局 */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="center">
+            不凡学院
+        </div>
+    </div>
+</body>
+
+</html>

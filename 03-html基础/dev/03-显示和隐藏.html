@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 隐藏元素 不再占据位置  消失了*/
+            /* display: none; */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 隐藏 依然占据位置  好像 透明度 0*/
+            /* visibility: hidden; */
+        }
+
+        .box span {
+            display: none;
+            /* visibility: hidden; */
+        }
+
+        /* :hover  鼠标悬停时(放在元素上边时) */
+        /* 你能修改的是他 本身 和他 后代的样式 */
+        .box:hover span {
+            /* 不为 none  就会显示 */
+            display: inline;
+            /* visibility: visible; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span>不凡学院</span>
+
+    </div>
+    <p>天气很好</p>
+</body>
+
+</html>

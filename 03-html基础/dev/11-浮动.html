@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+
+        .d1,
+        .d2,
+        .d3 {
+            /* 浮动指的是使元素脱离原来的文本流，在父元素中浮动起来。 */
+            /* 向左浮动 */
+            float: left;
+            /* float: right; */
+            width: 100px;
+            height: 50px;
+
+        }
+
+        .d1 {
+            background-color: blue;
+        }
+
+        .d2 {
+            background-color: green;
+        }
+
+        .d3 {
+            background-color: orange;
+        }
+
+        .w-box {
+            width: 100px;
+            height: 200px;
+            background-color: green;
+            margin-top: 10px;
+        }
+
+        .box1 {
+            /* 浮动之后脱离文档流,不再占据位置,下方的元素会上移 */
+            /* 浮动之后会变成块元素 */
+            /* 当一个块级元素浮动以后，宽度会默认被内容撑开，所以当漂浮一个块级元素时我们都会为其指定一个宽度 */
+            float: left;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        .box2 {
+
+            width: 90px;
+            height: 60px;
+            background-color: orange;
+        }
+
+        .w-box span {
+            float: left;
+            /* display: inline; */
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+        }
+
+        .box3 {
+            /* 此时宽度不再 继承父类的 100% */
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+    </div>
+    <div class="w-box">
+        <div class="box1">
+        </div>
+        <div class="box2">
+        </div>
+        <span>不凡学院</span>
+        <div class="box3">
+            天气很好
+        </div>
+    </div>
+</body>
+
+</html>

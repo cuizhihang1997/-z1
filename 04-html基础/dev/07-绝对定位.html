@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            /* position: fixed;
+            left: 10px;
+            top: 10px; */
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 50px;
+            background-color: red;
+        }
+
+        .inner-box {
+            /* 绝对定位 也是 有参照 物 */
+            /* 指使元素相对于视口或离他最近的祖先定位元素进行定位。 */
+
+
+            /* 使用绝对定位时 ,一定先想好参照物 */
+
+            /* 子绝父相 */
+            /* 相对定位 没有副作用 */
+            /* 相对定位 就是 用来 辅助 */
+
+
+            /* 绝对定位 之后 元素 特性 也会变 */
+            /* 宽度 you内容撑开 */
+            /* 脱离文档流 不占位置 */
+            /* 变成块元素 */
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            /* width: 100px; */
+            / height: 100px;
+            background-color: #333;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="inner-box">
+
+        </div>
+        <div class="box2">
+
+        </div>
+        <span></span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            background-color: red;
+            /* 1.指定高度 */
+            /* 2. 父类设置 overflow:hidden */
+            /* 3.在所有浮动元素之后 添加一个 空的 div 设置 clear: both; */
+        }
+
+        .inner-box {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 浮动的影响 -->
+    <div class="box">
+        <div class="inner-box">
+
+        </div>
+        <div class="inner-box">
+
+        </div>
+    </div>
+
+
+    定位 相对定位(relative)(辅助绝对定位)
+
+    固定定位(fixed)(浏览器视口)
+
+    绝对定位(absolute)(离自己最近的具有定位属性(relative,absolute,fixed)的祖先元素,,,,HTML文档所在视口)
+
+    通常 设置 left/right top/bottom 描述
+
+    层级的概念 z-index(定位元素) 数值越大层级越高
+</body>
+
+</html>

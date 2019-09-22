@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .inner-box {
+            float: left;
+
+            /* 浮动带来的影响 */
+            /* 浮动之后 脱离文档流,不能撑起父元素的 高度 */
+            /* 高度塌陷 */
+
+            /* 解决方法 */
+            /* 1.通常会给父元素指定一个高度 */
+            /* 2. 给父类盒子 设置 overflow: hidden; */
+            /* 3. 在浮动元素 之后 增加 一个 空的  div,给他设置 clear:both  */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .box {
+            /* height: 100px; */
+            /* 父元素高度  和内容一样高,但是我不知道 内容多高 */
+            /* overflow: hidden; */
+        }
+
+        .box2 {
+            width: 1000px;
+            height: 200px;
+            background-color: black;
+        }
+
+        .clr {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 但凡是 遇到浮动,很多情况下  都要都要清除浮动带来的影响 -->
+    <!-- 浮动的时候遵循这样一个原则    要浮动都浮动 -->
+    <div class="box">
+        <div class="inner-box">
+
+        </div>
+        <div class="clr">
+
+        </div>
+    </div>
+    <div class="box2">
+
+    </div>
+</body>
+
+</html>

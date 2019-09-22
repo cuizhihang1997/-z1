@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .d1 {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            z-index: 10;
+        }
+
+        .d2 {
+            position: fixed;
+            left: 30px;
+            top: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* 只对定位元素有效 */
+            z-index: -1;
+        }
+
+        .d3 {
+            position: fixed;
+            left: 50px;
+            top: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #333;
+            /* 写的再大,
+            也超不过 父类元素 */
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+
+    </div>
+    <div class="d2">
+        <div class="box">
+
+        </div>
+    </div>
+    <div class="d3">
+
+    </div>
+</body>
+
+</html>

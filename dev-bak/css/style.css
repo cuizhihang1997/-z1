@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 200px;
+
+}
+
+.header-c {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    background: pink url('../img/bf.png') no-repeat center;
+    /* 设置背景图片的尺寸 */
+    /* background-size: 220px 182px; */
+    /* background-size: cover; */
+    background-size: contain;
+}
+
+.banner {
+    height: 720px;
+    background: url('../img/banner1.png') no-repeat center;
+    background-size: cover;
+}
+
+.banner-c {
+    position: relative;
+    width: 1200px;
+    height: 720px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.banner .dot {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -50px;
+    width: 100px;
+    height: 10px;
+
+}
+
+.dot .dot-item {
+    float: left;
+    margin: 0 10px;
+    width: 6px;
+    height: 6px;
+    background-color: gray;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    /* 设置背景色  只在内容区域生效 */
+    background-clip: content-box;
+
+}
+
+.dot .dot-item:hover {
+    /* border: 2px solid #333; */
+    border-color: #333;
+}
+
+.jew {
+    height: 400px;
+}
+
+.jew-c {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border: 2px solid #333;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    top: -34px;
+    margin-left: -12px;
+    width: 0;
+    height: 0;
+    border: 12px solid;
+    border-color: transparent transparent #333 transparent;
+    border-bottom-width: 20px;
+}
+
+.arrow1 {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    margin-left: -12px;
+    width: 0;
+    height: 0;
+    border: 12px solid;
+    border-color: transparent transparent #fff transparent;
+    border-bottom-width: 20px;
+}
+
+.box:hover {
+    border-color: red;
+}
+
+.box:hover .arrow {
+    border-bottom-color: red;
+}

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* 头部 */
+        .header {
+            height: 76px;
+            background-color: #fdfcfc;
+        }
+
+        .header .header-c {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .header-c .logo {
+            float: left;
+            width: 106px;
+            height: 76px;
+            background: url(img/logo.png) no-repeat 0 20px;
+        }
+        .nav {
+            float: right;
+            height: 100%;;
+          
+        }
+        .nav .nav-item {
+            
+            float: left;
+            width: 84px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            margin-left: 50px;
+            margin-top: 20px;
+            
+            
+        }
+       
+        
+        .nav-item a {
+            font-size: 16px;
+            color: #818181;
+        }
+        .nav .nav-item .sub-nav {
+            display: none;
+            width: 100%;
+            background-color: #f2f3f3;
+            position: relative;
+            z-index: 9;
+            
+        }
+
+        .sub-nav .sub-item {
+            font-size: 14px;
+            color: #737375;
+            width: 84px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-top: 2px;
+            
+            
+        }
+        .nav .nav-item:hover {
+            border-bottom: 2px solid #00daed;
+        }
+        .nav .nav-item:hover a {
+            color: #00daed;
+        }
+        .nav .nav-item:hover .sub-nav {
+            display: block; 
+            
+        }
+        .nav-item .sub-nav .sub-item a {
+            color: #939394;
+        }
+        .nav-item .sub-nav .sub-item:hover a {
+            color: #00daed;
+        }
+        /* 广告牌*/
+        .banner {
+            height: 624px;
+            margin-bottom: 100px;
+        }
+        .banner-c {
+            position: relative;
+            background: url(img/banner1.jpg) no-repeat center;
+            height: 624px;
+            margin: 0 auto;
+            
+
+        }
+        .banner-c .dots {
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            margin-left: -41px;
+            width: 82px;
+            height: 15px;
+        }
+        .banner-c .dots .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+        }
+        #dot2 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .dots .dot:hover {
+            background-color: #ffffff;
+        }
+        
+        /* 主要1 */
+        .main1 {
+            height: 1048px;
+            margin-bottom: 100px;
+        }
+        .main1-c {
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            /* background-color: pink; */
+            margin: 0 auto;
+        }
+        .yan {
+            position: absolute;
+            top: 3px;
+            width: 52px;
+            height: 13px;
+            background-color: #04e4f8;
+            margin-left: -24px;
+        }
+        #p1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 1;
+            font-size: 24px;
+            color: #3b3b3b;
+            font-weight: bolder;
+            margin-bottom: 9px;
+        }
+        #p2 {
+            position: absolute;
+            left: 0;
+            top: 32px;
+            color: #c7c7c7;
+            font-size: 14px;
+        }
+        .main1 .image1 {
+            position: absolute;
+            top: 85px;
+            width: 380px;
+            height: 273px;
+            background: url(img/nei1.png) no-repeat;
+        }
+        .inf1 {
+            position: absolute;
+            right: 0;
+            top: 148px;
+            width: 820px;
+            height: 167px;
+            background-color: #fbfbfb;
+            text-align: center;
+            line-height: 40px;
+        }
+        .inf1 .hui {
+            color: #626365;
+            font-size: 14px;
+            
+        }
+        .inf1 .hui1 {
+            color: #404400;
+            font-size: 22px;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+        .inf1 .hui span {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            transform: rotate(45deg);
+            margin-right: 3px;
+        }
+        .hui .dot1 {
+            background-color: #f19ec2;
+        }
+        .hui .dot2 {
+            background-color: #f19149;
+        }
+        .hui .dot3 {
+            background-color: #8c97cb;
+        }
+        .hui .dot4 {
+            background-color: #7ecef4;
+        }
+        .hui .dot5 {
+            background-color: #cfe39e;
+        }
+        .hui .dot6 {
+            background-color: #84ccc9;
+        }
+
+
+        .image2 {
+            position: absolute;
+            right: 0;
+            top: 361px;
+            width: 380px;
+            height: 273px; 
+            background: url(img/n2.png) no-repeat;
+        }
+        .inf2 {
+            position: absolute;
+            left: 0;
+            top: 428px;
+            width: 820px;
+            height: 167px;
+            background-color: #fbfbfb;
+            text-align: center;
+            line-height: 40px;
+        }
+        .inf2 .hei {
+            color: #626365;
+            font-size: 14px;
+            
+        }
+        .inf2 .hei1 {
+            color: #404400;
+            font-size: 22px;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+        .inf2 .hei span {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            transform: rotate(45deg);
+            margin-right: 3px;
+        }
+        .hei .dot1 {
+            background-color: #f19ec2;
+        }
+        .hei .dot2 {
+            background-color: #f19149;
+        }
+        .hei .dot3 {
+            background-color: #8c97cb;
+        }
+        .hei .dot4 {
+            background-color: #7ecef4;
+        }
+        .hei .dot5 {
+            background-color: #cfe39e;
+        }
+        .hei .dot6 {
+            background-color: #84ccc9;
+        }
+
+        .image3 {
+            position: absolute;
+            left: 0;
+            bottom: 137px;
+            width: 380px;
+            height: 273px; 
+            background: url(img/n3.png) no-repeat;
+        }
+        .inf3 {
+            position: absolute;
+            right: 0;
+            bottom: 181px;
+            width: 820px;
+            height: 167px;
+            background-color: #fbfbfb;
+            text-align: center;
+            line-height: 40px;
+        }
+        .inf3 .fei {
+            color: #626365;
+            font-size: 14px;
+            
+        }
+        .inf3 .fei1 {
+            color: #404400;
+            font-size: 22px;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+        .inf3 .fei span {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            transform: rotate(45deg);
+            margin-right: 3px;
+        }
+        .fei .dot1 {
+            background-color: #f19ec2;
+        }
+        .fei .dot2 {
+            background-color: #f19149;
+        }
+        .fei .dot3 {
+            background-color: #8c97cb;
+        }
+        .fei .dot4 {
+            background-color: #7ecef4;
+        }
+        .fei .dot5 {
+            background-color: #cfe39e;
+        }
+        .fei .dot6 {
+            background-color: #84ccc9;
+        }
+        
+        .main1-c .more {
+            position: absolute;
+            bottom: 1px;
+            left: 401px;
+            width: 390px;
+            height: 64px;
+            border:  2px solid #f2f2f2;
+            text-align: center;
+            line-height: 64px;
+        }
+        .main1-c .more a {
+            font-size: 16px;
+            color: #807e7e;
+        }
+        .main1-c .more:hover {
+            border-color: #00daed;
+        }
+        .main1-c .more a:hover {
+            color: #00daed;   
+        }
+
+        /* 主要2 */
+        .main2 {
+            height: 296px;
+            /* width: 1800px; */
+            background-color: #fbfbfb;
+            margin-bottom: 100px;
+        }
+        .main2-c {
+            position: relative;
+            width: 1490px;
+            height: 296px;
+            margin: 0 auto;
+            background: url(img/z1.png) no-repeat;
+            margin-left: -225px;
+        }
+        .main2-c .introduce{
+            width: 79px;
+            /* height: 37px; */
+            border-right: 1px solid #a5a5a9;
+            position: absolute;
+            right: 521px;;
+            top: 73px;
+        }
+        .introduce .p1 {
+            font-size: 18px;
+            color: #3b3b3b;
+            font-weight: bolder;
+          
+        }
+        .introduce .p2 {
+            color: #c7c7c7;
+            font-size: 12px;
+        }
+        .inwords {
+            font-size: 14px;
+            color: #626365;
+            position: absolute;
+            top: 73px;
+            right: 95px;
+        }
+
+        .main2-c .concept {
+            width: 79px;
+            /* height: 37px; */
+            border-right: 1px solid #a5a5a9;
+            position: absolute;
+            right: 521px;;
+            top: 199px;
+        }
+        .concept .p1 {
+            font-size: 18px;
+            color: #3b3b3b;
+            font-weight: bolder;
+          
+        }
+        .concept .p2 {
+            color: #c7c7c7;
+            font-size: 12px;
+        }
+        .cowords {
+            font-size: 14px;
+            color: #626365;
+            position: absolute;
+            top: 199px;
+            right: 203px;
+        }
+
+        /* 主要3 */
+        .main3 {
+            height: 735px;
+            margin-bottom: 100px;
+        }
+        .main3-c {
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;      
+        }
+        .main3-c .jing {
+            position: absolute;
+            top: 3px;
+            width: 52px;
+            height: 13px;
+            background-color: #04e4f8;
+            margin-left: -24px;
+        }
+        #p3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 1;
+            font-size: 24px;
+            color: #3b3b3b;
+            font-weight: bolder;
+            margin-bottom: 9px;
+        }
+        #p4 {
+            position: absolute;
+            left: 0;
+            top: 32px;
+            color: #c7c7c7;
+            font-size: 14px;
+        }
+        .main3-c .image4 {
+            width: 1200px;
+            height: 499px;
+            background: url(img/m3.png) no-repeat;
+            position: absolute;
+            top: 104px;
+        }
+        .main3-c .more {
+            position: absolute;
+            bottom: 1px;
+            left: 401px;
+            width: 390px;
+            height: 64px;
+            border:  2px solid #f2f2f2;
+            text-align: center;
+            line-height: 64px;
+        }
+        .main3-c .more a {
+            font-size: 16px;
+            color: #807e7e;
+        }
+        .main3-c .more:hover {
+            border-color: #00daed;
+        }
+        .main3-c .more a:hover {
+            color: #00daed;   
+        }
+        /* 主要4 */
+        .main4 {
+            height: 338px;
+            margin-bottom: 100px;
+        }
+        .main4-c {
+            position: relative;
+            /* width: 1200px; */
+            height: 100%;
+            background: url(img/m4.png) no-repeat center;
+            margin: 0 auto;
+        }
+        .ding {
+            position: absolute;
+            top: 102px;
+            left: 25%;
+            width: 142px;
+            height: 41px;
+            border: 2px solid #a5a5a9;
+            line-height: 41px;
+            text-align: center;
+        }
+        .ding a {
+            color: #f1f2f3;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .ding:hover {
+            background-color: #00daed;
+        }
+
+        .dwords {
+            position: absolute;
+            left: 23%;
+            top: 163px;
+            width: 201px;
+            height: 59px;
+            text-align: center;
+        }
+        .dwords .words1 {
+            font-size: 22px;
+            color: #bdbaba;
+        }
+        .dwords .words2 {
+            font-size: 12px;
+            color: #bdbaba;
+        }
+        .dwords .line {
+            display: block;
+            height: 2px;
+            width: 32px;
+            background-color: #bdbaba;
+            margin-left: 86px;
+            margin-top: 15px;
+        }
+
+        .ling {
+            position: absolute;
+            top: 102px;
+            right: 25%;
+            width: 142px;
+            height: 41px;
+            border: 2px solid #a5a5a9;
+            line-height: 41px;
+            text-align: center;
+        }
+        .ling a {
+            color: #f1f2f3;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .ling:hover {
+            background-color: #00daed;
+        }  
+        .lwords {
+            position: absolute;
+            right: 23%;
+            top: 163px;
+            width: 201px;
+            height: 59px;
+            text-align: center;
+        }
+        .lwords .words1 {
+            font-size: 22px;
+            color: #bdbaba;
+        }
+        .lwords .words2 {
+            font-size: 12px;
+            color: #bdbaba;
+        }
+        .lwords .line {
+            display: block;
+            height: 2px;
+            width: 32px;
+            background-color: #bdbaba;
+            margin-left: 86px;
+            margin-top: 15px;
+        }
+        /* 底部开始 */
+        .footer {
+            height: 380px;
+            margin-bottom: 100px;
+        }
+        .footer-c {
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            /* background-color: pink; */
+        }
+        .footer-c .lian {
+            position: absolute;
+            top: 3px;
+            width: 52px;
+            height: 13px;
+            background-color: #04e4f8;
+            margin-left: -24px;
+        }
+        #p5 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 1;
+            font-size: 24px;
+            color: #3b3b3b;
+            font-weight: bolder;
+            margin-bottom: 9px;
+        }
+        #p6 {
+            position: absolute;
+            left: 0;
+            top: 32px;
+            color: #c7c7c7;
+            font-size: 14px;
+        }
+        .man {
+            position: absolute;
+            left: 0;
+            top: 118px;
+            color:  #5d5d5d;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .xin {
+            position: absolute;
+            left: 4px;;
+            top: 187px;
+            font-size: 14px;
+            color: #9fa2a2;
+        }
+        .xin .add {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .xin .tel {
+            margin-bottom: 20px;
+        }
+        .link .logo1 {
+            position: absolute;
+            left: 0px;
+            bottom: 30px;
+            width: 21px;
+            height: 17px;
+            background: url(img/qq.png) no-repeat;
+        }
+        .link .logo2 {
+            position: absolute;
+            left: 41px;
+            bottom: 30px;
+            width: 20px;
+            height: 17px;
+            background: url(img/wx.png) no-repeat;
+        }
+        .link .logo3 {
+            position: absolute;
+            left: 78px;
+            bottom: 30px;
+            width: 20px;
+            height: 17px;
+            background: url(img/wb.png) no-repeat;
+        }
+        .footer-c .co {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-size: 14px;
+            color: #9fa2a2;
+        }
+        .text {
+            
+            position: absolute;
+            right: 0;
+            top: 138px;
+            
+        }
+        .text span {
+            font-size: 14px;
+            color: #bfbdbd;
+        }
+        .text .name {
+            float: left;
+            width: 133px;
+            height: 69px;
+            border-bottom: 1px solid #bfbdbd;
+        }
+        .text .post {
+            float: left;
+            width: 133px;
+            height: 69px;
+            margin-left: 46px;
+            border-bottom: 1px solid #bfbdbd;
+        }
+        .text .phone {
+            float: left;
+            width: 133px;
+            height: 69px;
+            margin-left: 46px;
+            border-bottom: 1px solid #bfbdbd;
+        }
+        .text input {
+            margin-top: 30px;
+            outline: none;
+            border: none;
+        }
+
+        .content span {
+            font-size: 14px;
+            color: #bfbdbd;
+        }
+        .content {
+            position: relative;
+            position: absolute;
+            right: 0;
+            top: 250px;
+            width: 491px;
+            height: 69px;
+            border-bottom: 1px solid #bfbdbd;
+        }
+        .content input {
+            position: absolute;
+            left: 0px;
+            bottom: 1px;
+            outline: none;
+            border: none;
+        }
+        .but button{
+            position: absolute;
+            bottom: 8px;
+            right: 430px;
+            width: 61px;
+            height: 24px;
+            background-color: #474646;
+            border: 0;
+        }
+        .but a {
+            font-size: 14px;
+            color: #e0e0e0;
+        }
+
+        
+    </style>
+
+</head>
+<!-- 头部开始 -->
+<div class="header">
+    <div class="header-c">
+        <div> <a href="" class="logo"></a>
+        </div>
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="">首页</a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/特别策划/index.html">特别策划</a>
+                
+            </li>
+            <li class="nav-item">
+                <a href="">精品路线</a>
+                <ul class="sub-nav">
+                        <li class="sub-item">
+                            <a href="pages/精品路线-定制团游/index.html">定制团体游</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="pages/精品路线-领队自由行/index.html">领队自由行</a>
+                        </li>
+                    </ul>
+            </li>
+            <li class="nav-item">
+                <a href="pages/关于我们/index.html">关于我们</a>
+                <ul class="sub-nav">
+                        <li class="sub-item">
+                            <a href="">企业理念</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="">品牌介绍</a>
+                        </li>
+                    </ul>
+            </li>
+            <li class="nav-item">
+                <a href="pages/联系我们/index.html">联系我们</a>
+                <ul class="sub-nav">
+                        <li class="sub-item">
+                            <a href="">在线咨询</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="">留言板块</a>
+                        </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    
+</div>
+<!-- 广告牌 -->
+<div class="banner">
+        <div class="banner-c">
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot" id="dot2"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+</div>
+<!-- 主1 -->
+<div class="main1">
+    <div class="main1-c">
+         <diV class="yan"></div>
+         <p id="p1">特别策划</p>
+         <p id="p2">ACTIVITY ROUTR</p>
+         <div class="image1"></div>
+         <div class="inf1">
+             <p class="hui1">苍山洱海旁 , 过一段慢时光</p>
+             <p class="hui">云南风花雪月之旅 （6days）</p>
+             <p class="hui">
+                 <span class="dot1"></span>洱海骑行&nbsp;
+                 <span class="dot2"></span>手作扎染&nbsp;
+                 <span class="dot3"></span>泸沽湖划船&nbsp;
+                 <span class="dot4"></span>草海&nbsp;
+                 <span class="dot5"></span>束河古镇&nbsp;
+                 <span class="dot6"></span>拉市海
+            </p>
+         </div>  
+         <div class="image2"></div>
+         <div class="inf2">
+                <p class="hei1">苍近距离看 “滚滚” 花式卖萌</p>
+                <p class="hei">成都City&nbsp;&nbsp;Walk之旅 （6days）</p>
+                <p class="hei">
+                    <span class="dot1"></span>熊猫基地&nbsp;
+                    <span class="dot2"></span>宽窄巷子&nbsp;
+                    <span class="dot3"></span>武侯祠&nbsp;
+                    <span class="dot4"></span>小酒馆&nbsp;
+                    <span class="dot5"></span>吃货天堂&nbsp;
+                    <span class="dot6"></span>锦里
+                </p>
+         </div>
+        <div class="image3"></div> 
+        <div class="inf3">
+                <p class="fei1">骑行青海湖 , 行摄纯净天空之境</p> 
+                <p class="fei">梦回大西北之旅 （6days）</p>                   
+                <p class="fei">
+                    <span class="dot1"></span>茶卡盐湖 &nbsp;
+                    <span class="dot2"></span>U型天路&nbsp;
+                    <span class="dot3"></span>青海湖日出&nbsp;
+                    <span class="dot4"></span>魔鬼城&nbsp;
+                    <span class="dot5"></span>七彩丹霞&nbsp;
+                    <span class="dot6"></span>莫高窟</p>
+        </div>
+        <div class="more"> <a href="">MORE</a> </div>
+    </div>
+    
+</div>
+<!-- 主要2 -->
+<div class="main2">
+    <div class="main2-c">
+            <div class="introduce">
+                <p class="p1">介绍</p>
+                <p class="p2">INTRODUCE</p>
+            </div>
+            <div class="inwords"> 
+                <span>新旅行概念社区 ，在这里 ，你可以收货来自世界各地的友谊 ，为您</span> <br>
+                <span>提供省心、省钱、纯玩、有趣的路线随时带您出发看世界。</span>
+            </div>
+            <div class="concept">
+                <p class="p1">理念</p>
+                <p class="p2">CONCEPT</p>
+            </div>
+            <div class="cowords">           
+                <span>每一寸土地都承载着一个城市厚重而亲切的灵魂。</span> <br>
+                <span>About travel, about life, That's all.</span>
+            </div>
+    </div>
+</div>
+<!-- 主要3 -->
+<div class="main3">
+    <div class="main3-c">
+        <diV class="jing"></div>
+        <p id="p3">精品路线</p>
+        <p id="p4">CLASSICS ROUTR</p>
+        <div class="image4"></div>
+        <div class="more"> <a href="">MORE</a> </div>
+    </div>
+    
+</div>
+<!-- 主要4 -->
+<div class="main4">
+    <div class="main4-c">
+        <div class="ding">
+          <a href="pages/精品路线-定制团游/index.html">定制团体游</a>  
+        </div>
+        <div class="dwords">
+            <span class="words1">独立成团&nbsp;&nbsp;&nbsp;专属定制</span> <br>
+            <span class="words2">简单几步 ， 定制您的私人旅行</span> <br>
+            <span class="line"></span>  
+        </div>
+        <div class="ling">
+            <a href="pages/精品路线-领队自由行/index.html">领队自由行</a>
+        </div>
+        <div class="lwords">
+                <span class="words1">金牌领队&nbsp;&nbsp;&nbsp;专业跟拍</span> <br>
+                <span class="words2">解锁陌生 ，升级地道旅游体验</span> <br>
+                <span class="line"></span>  
+        </div>
+
+
+    </div>
+</div>
+<!-- 底部 -->
+<div class="footer">
+    <div class="footer-c">
+            <diV class="lian"></div>
+            <p id="p5">联系我们</p>
+            <p id="p6">CONTACT</p>
+            <div class="man">慢旅Slow Travle工作室</div>
+            <div class="xin">
+               <div>地点：中国河南省郑州市绿地新都汇</div>
+               <div class="add">邮编：1000000</div>                   
+               <div class="tel">电话：0392-23656504</div> 
+               <div>邮箱：manlv@qq.com</div>     
+            </div>
+            <div class="link">
+                <a href="" class="logo1"></a> 
+                <a href="" class="logo2"></a> 
+                <a href="" class="logo3"></a>
+            </div>
+            <span class="co">COPYRIGHT (©) 2018 mo004_2551 - 生活方式旅游类网站</span>
+            <div class="text">
+                <div class="name">
+                        <span>姓名</span>
+                        <input type="text" value="" class="xing">
+                </div>
+                <div class="post">
+                        <span>邮箱</span>
+                        <input type="text" value="" class="you">
+                </div>
+                <div class="phone">
+                        <span>电话</span>
+                        <input type="text" value="" class="dian">
+                </div>
+            </div>
+            <div class="content">
+                <span>内容</span>
+                <input type="text" value="" class="nei">
+            </div>
+            <div class="but">
+                <button><a href="">提交</a></button>
+            </div>
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>

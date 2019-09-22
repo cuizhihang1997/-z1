@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .news-list {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .new-item {
+            /* width: 100%; */
+            height: 100%;
+            /* background-color: red; */
+        }
+
+        .new-item .text {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .new-item .tags {
+            float: right;
+        }
+
+        .type {
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+        .type.red {
+            border-color: red;
+            color: red;
+        }
+
+        .type.gray {
+            border-color: gray;
+            color: gray;
+        }
+
+        .type.blue {
+            border-color: blue;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="news-list">
+        <li class="new-item">
+
+            <div class="tags">
+                <span class="type gray">都市</span>
+                <span class="type red">连载中</span>
+                <span class="type blue">54.82万字</span>
+            </div>
+            <p class="text">这是一个新的故事故事故事故事</p>
+        </li>
+        <li class="new-item">
+            <div class="tags">
+                <span class="type gray">都市</span>
+                <span class="type red">完本</span>
+                <span class="type blue">8.2万字</span>
+            </div>
+            <p class="text">这是一个新的故事故事故事故事</p>
+        </li>
+        <li class="new-item">
+            <div class="tags">
+                <span class="type gray">都市</span>
+                <span class="type red">连载中</span>
+                <span class="type blue">54.82万字</span>
+            </div>
+            <p class="text">这是一个新</p>
+        </li>
+    </ul>
+</body>
+
+</html>

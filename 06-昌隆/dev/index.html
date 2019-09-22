@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			.top {
+				height: 37px;
+				background-color: #2e3139;
+			}
+
+			.header {
+				height: 98px;
+				background-color: #fff;
+			}
+
+			.banner {
+				height: 400px;
+				background-color: #114474;
+			}
+
+			.main {
+				/* height: 600px; */
+				background-color: #f2f2f2;
+			}
+
+			.footer {
+				height: 204px;
+				background-color: #2e3139;
+			}
+
+			.top-c,
+			.header-c,
+			.banner-c,
+			.main-c,
+			.footer-c {
+				position: relative;
+				width: 1000px;
+				height: 100%;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+
+			.top .wel {
+				height: 37px;
+				line-height: 37px;
+				font-size: 14px;
+				color: #969696;
+			}
+
+			.top .setting {
+				position: absolute;
+				right: 0;
+				top: 11px;
+				font-size: 14px;
+				line-height: 15px;
+			}
+
+			.top .set-l {
+				float: left;
+				padding-right: 14px;
+				border-right: 1px solid #969696;
+				color: #969696;
+			}
+
+			.top .set-r {
+				padding-left: 18px;
+				float: left;
+				color: #969696;
+			}
+
+			.header .logo {
+				float: left;
+				width: 180px;
+				height: 100%;
+				background: url("img/logo.png") no-repeat center;
+			}
+
+			.nav {
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 100%;
+			}
+
+			.nav .nav-item {
+				position: relative;
+				float: left;
+				width: 90px;
+				height: 100%;
+				text-align: center;
+				line-height: 98px;
+				font-size: 16px;
+				margin-left: 24px;
+			}
+
+			.nav .nav-item.mr0 {
+				width: 77px;
+				text-align: right;
+			}
+
+			.nav .nav-item a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: #5a5a5a;
+			}
+
+			.nav .nav-item span {
+				display: none;
+				position: absolute;
+				left: 0;
+				bottom: 29px;
+				width: 100%;
+				height: 2px;
+				background-color: blue;
+			}
+
+			.nav .nav-item.active span {
+				display: block;
+			}
+
+			.nav .nav-item.active a {
+				color: blue;
+			}
+
+			.nav .nav-item:hover span {
+				display: block;
+			}
+
+			.nav .nav-item:hover a {
+				color: blue;
+			}
+			.banner-c {
+				background: url("img/banner.jpg") no-repeat center;
+			}
+
+			/* 产品中心 */
+			.main .product {
+				float: left;
+				height: 224px;
+				padding-top: 40px;
+			}
+			.main .title {
+				position: relative;
+				height: 29px;
+				border-bottom: 1px solid #969696;
+			}
+			.title .dots {
+				float: left;
+				margin-left: 2px;
+				margin-top: 1px;
+			}
+			.dots span {
+				display: block;
+				width: 6px;
+				height: 6px;
+				background-color: blue;
+			}
+			.dots .dot-t {
+				margin-bottom: 4px;
+			}
+			.title .cname {
+				float: left;
+				line-height: 1;
+				font-size: 18px;
+				color: #5a5a5a;
+				margin: 0 20px 0 14px;
+			}
+			.title .ename {
+				float: left;
+				line-height: 1;
+				font-size: 15px;
+				color: #5a5a5a;
+				margin-top: 3px;
+			}
+			.title .more {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 52px;
+				height: 20px;
+				border: 1px solid #cfcfcf;
+				color: #5a5a5a;
+				font-size: 14px;
+				text-align: center;
+				line-height: 20px;
+				border-radius: 4px;
+			}
+			.main .pro-list {
+				overflow: hidden;
+			}
+			.main .pro-item {
+				float: left;
+				margin: 17px 8px 0 0;
+			}
+			.main .pro-item.mr0 {
+				margin-right: 0;
+			}
+			.main .pro-item .pro-img {
+				width: 244px;
+				height: 151px;
+				background: #fff url("img/pro_2.png") no-repeat center;
+			}
+			.main .pro-item .pro-title {
+				margin-top: 11px;
+				text-align: center;
+				line-height: 1;
+				font-size: 15px;
+				color: #3a3a3a;
+			}
+			.main .company {
+				float: left;
+				height: 221px;
+				padding-top: 55px;
+			}
+			.company .company-img {
+				float: left;
+				width: 300px;
+				height: 170px;
+				margin-top: 19px;
+				background: #fff url("img/company.png") no-repeat center;
+			}
+			.company .company-introduce {
+				float: left;
+				width: 675px;
+				height: 170px;
+				margin-top: 19px;
+				margin-left: 25px;
+				/* background-color: pink; */
+			}
+			.company-introduce h2 {
+				font-size: 16px;
+				color: #3a3a3a;
+				font-weight: bolder;
+			}
+			.company-introduce p {
+				font-size: 14px;
+				color: #6d6d6d;
+				text-indent: 2em;
+				line-height: 24px;
+			}
+			.main .concat {
+				float: left;
+				width: 300px;
+				height: 235px;
+				margin-top: 55px;
+				background-color: pink;
+			}
+			.main .news {
+				float: left;
+				width: 675px;
+				height: 235px;
+				margin-top: 55px;
+				margin-left: 25px;
+				background-color: red;
+			}
+			.zx {
+				position: fixed;
+				bottom: 50px;
+				left: 50%;
+				margin-left: 512px;
+				width: 141px;
+				height: 181px;
+				background-color: orange;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="top-c">
+				<div class="wel">欢迎莅临河南省巩义市昌隆精化有限公司！</div>
+				<div class="setting">
+					<a href="#" class="set-l">收藏本站</a>
+					<a href="#" class="set-r">设为首页</a>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="header-c">
+				<a href="#" class="logo"></a>
+				<ul class="nav">
+					<li class="nav-item active">
+						<a href="#">首页</a>
+						<span class="line"></span>
+					</li>
+					<li class="nav-item">
+						<a href="#">公司简介</a>
+						<span class="line"></span>
+					</li>
+					<li class="nav-item">
+						<a href="#">公司简介</a>
+						<span class="line"></span>
+					</li>
+					<li class="nav-item">
+						<a href="#">公司简介</a>
+						<span class="line"></span>
+					</li>
+					<li class="nav-item">
+						<a href="#">公司简介</a>
+						<span class="line"></span>
+					</li>
+					<li class="nav-item mr0">
+						<a href="#">公司简介</a>
+						<span class="line"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="banner-c"></div>
+		</div>
+		<div class="main">
+			<div class="main-c">
+				<!-- 产品中心 -->
+				<div class="product">
+					<div class="title">
+						<div class="dots">
+							<span class="dot-t"></span>
+							<span class="dot-b"></span>
+						</div>
+						<span class="cname">产品中心</span>
+						<span class="ename">PRODUCT</span>
+						<a href="#" class="more">more></a>
+					</div>
+					<div class="pro-list">
+						<div class="pro-item">
+							<div class="pro-img"></div>
+							<p class="pro-title">水玻璃</p>
+						</div>
+						<div class="pro-item">
+							<div class="pro-img"></div>
+							<p class="pro-title">水玻璃</p>
+						</div>
+						<div class="pro-item">
+							<div class="pro-img"></div>
+							<p class="pro-title">水玻璃</p>
+						</div>
+						<div class="pro-item mr0">
+							<div class="pro-img"></div>
+							<p class="pro-title">水玻璃</p>
+						</div>
+					</div>
+				</div>
+				<!-- 公司简介 -->
+				<div class="company">
+					<div class="title">
+						<div class="dots">
+							<span class="dot-t"></span>
+							<span class="dot-b"></span>
+						</div>
+						<span class="cname">产品中心</span>
+						<span class="ename">PRODUCT</span>
+						<a href="#" class="more">more></a>
+					</div>
+					<div class="company-img"></div>
+					<div class="company-introduce">
+						<h2>河南省巩义市</h2>
+						<p>
+							巩义市昌隆精化有限公司位于人杰地灵的杜甫故里巩义市，成立于1999年，经过近17年的不懈努力,我们
+							已成为国内最专业的硅酸钠类产品生产厂家，郑州地区居同行业之首。
+						</p>
+						<p>
+							公司主要生产固体、液体、粉状、钾钠等多种规格的泡花碱，其中年生产固体2万吨以上，液体5万吨速溶
+							硅酸钠千余吨，并可根据用户需要生产特殊规格的泡花碱。我们以稳定的产品质量、优质的服务赢得了广大客
+							户的信赖和支持，产品畅销全国以及世界各个国家和地区。公司在立足国内市场的同时，积极开拓国际市场。
+							目前产品已销往东南亚、欧洲等国家和地区。公司愿与有志之士协同合作，互利共赢！
+						</p>
+					</div>
+				</div>
+				<div class="concat"></div>
+				<div class="news"></div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-c"></div>
+		</div>
+		<div class="zx"></div>
+	</body>
+</html>

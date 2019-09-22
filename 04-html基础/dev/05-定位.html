@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .zx {
+            /* 固定定位 */
+            /* 相对浏览器(视口)定位 */
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+            width: 100px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .box {
+            height: 1500px;
+            width: 1500px;
+            background-color: #333;
+            position: fixed ;
+        }
+
+        span {
+            position:fixed;
+            left: 10px;
+            top: 10px;
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 定位 -->
+    <!-- position releative absolute fixed -->
+    <!-- 开启定位 之后 元素会脱离文档 不再占据位置 -->
+    <!-- 元素特性发生改变 1,变为块元素
+    2. 宽度由内容撑开,不再是父类的100% ,通常需要自己指定宽度-->
+    <div class="zx">
+        恢复高考
+    </div>
+    <div class="box">
+
+    </div>
+    <span></span>
+</body>
+
+</html>

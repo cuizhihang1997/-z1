@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>领队自由行</title>
+    <style>
+        .main1 {
+            height: 280px;
+            margin-bottom: 70px;
+        }
+
+        .main1-c {
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        .main1-c .title {
+
+            position: absolute;
+            left: 0;
+            top: 85px;
+            width: 89px;
+            height: 41px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: #434545;
+            border: 1px solid #c2c7cc;
+            line-height: 41px;
+            text-align: center;
+            /* z-index: 6; */
+
+        }
+
+        .main1-c .title:hover {
+            color: #ffffff;
+            background-color: #5ad0dc;
+        }
+
+        .img1 {
+            height: 280px;
+            width: 1085px;
+            margin-left: 130px;
+
+        }
+
+
+        .image1 {
+            float: left;
+            position: relative;
+            width: 323px;
+            height: 278px;
+            background: url(img/1.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+
+        }
+
+        .image1 .bac {
+            position: relative;
+            width: 323px;
+            height: 199px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image1 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image1:hover .bac {
+            display: block;
+
+        }
+
+        .image1:hover {
+            cursor: pointer;
+        }
+
+        .image1 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image1 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image1 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+
+        }
+
+
+        .image2 {
+            float: left;
+            position: relative;
+            width: 310px;
+            height: 278px;
+            background: url(img/2.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+        .image2 .bac {
+            position: relative;
+            width: 310px;
+            height: 199px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image2 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image2:hover .bac {
+            display: block;
+
+        }
+
+        .image2:hover {
+            cursor: pointer;
+        }
+        .image2 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image2 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image2 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+        }
+
+        .image3 {
+            float: left;
+            position: relative;
+            width: 308px;
+            height: 278px;
+            background: url(img/3.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+
+        }
+        .image3 .bac {
+            position: relative;
+            width: 308px;
+            height: 204px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image3 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image3:hover .bac {
+            display: block;
+
+        }
+
+        .image3:hover {
+            cursor: pointer;
+        }
+        .image3 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image3 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image3 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+        }
+
+        .main2 {
+            height: 280px;
+            margin-bottom: 70px;
+        }
+
+        .main2-c {
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        .main2-c .title {
+
+            position: absolute;
+            left: 0;
+            top: 85px;
+            width: 89px;
+            height: 41px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: #434545;
+            border: 1px solid #c2c7cc;
+            line-height: 41px;
+            text-align: center;
+            /* z-index: 6; */
+
+        }
+
+        .main2-c .title:hover {
+            color: #ffffff;
+            background-color: #5ad0dc;
+        }
+
+        .img2 {
+            height: 280px;
+            width: 1085px;
+            margin-left: 130px;
+
+        }
+
+
+        .image4 {
+            float: left;
+            position: relative;
+            width: 325px;
+            height: 278px;
+            background: url(img/4.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+
+        }
+        .image4 .bac {
+            position: relative;
+            width: 325px;
+            height: 192px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image4 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image4:hover .bac {
+            display: block;
+
+        }
+
+        .image4:hover {
+            cursor: pointer;
+        }
+        .image4 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image4 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image4 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+
+        }
+
+
+        .image5 {
+            float: left;
+            position: relative;
+            width: 308px;
+            height: 278px;
+            background: url(img/5.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+        .image5 .bac {
+            position: relative;
+            width: 308px;
+            height: 194px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image5 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image5:hover .bac {
+            display: block;
+
+        }
+
+        .image2:hover {
+            cursor: pointer;
+        }
+        .image5 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image5 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image5 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+        }
+
+        .image6 {
+            float: left;
+            position: relative;
+            width: 304px;
+            height: 278px;
+            background: url(img/6.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+
+        }
+        .image6 .bac {
+            position: relative;
+            width: 304px;
+            height: 195px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image6 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image6:hover .bac {
+            display: block;
+
+        }
+
+        .image6:hover {
+            cursor: pointer;
+        }
+        .image6 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image6 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image6 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+        }
+
+        .main3 {
+            height: 280px;
+            margin-bottom: 65px;
+        }
+
+        .main3-c {
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        .main3-c .title {
+
+            position: absolute;
+            left: 0;
+            top: 85px;
+            width: 89px;
+            height: 41px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: #434545;
+            border: 1px solid #c2c7cc;
+            line-height: 41px;
+            text-align: center;
+            /* z-index: 6; */
+
+        }
+
+        .main3-c .title:hover {
+            color: #ffffff;
+            background-color: #5ad0dc;
+        }
+
+        .img3 {
+            height: 280px;
+            width: 1085px;
+            margin-left: 130px;
+
+        }
+
+
+        .image7 {
+            float: left;
+            position: relative;
+            width: 323px;
+            height: 278px;
+            background: url(img/7.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+
+        }
+        .image7 .bac {
+            position: relative;
+            width: 323px;
+            height: 191px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image7 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image7:hover .bac {
+            display: block;
+
+        }
+
+        .image7:hover {
+            cursor: pointer;
+        }
+        .image7 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image7 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image7 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+
+        }
+
+
+        .image8 {
+            float: left;
+            position: relative;
+            width: 308px;
+            height: 278px;
+            background: url(img/8.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+        .image8 .bac {
+            position: relative;
+            width: 308px;
+            height: 191px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image8 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image8:hover .bac {
+            display: block;
+
+        }
+
+        .image8:hover {
+            cursor: pointer;
+        }
+        .image8 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image8 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image8 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+        }
+
+        .image9 {
+            float: left;
+            position: relative;
+            width: 307px;
+            height: 278px;
+            background: url(img/9.png) no-repeat;
+            border-bottom: 1px solid #7e8080;
+
+        }
+        .image9 .bac {
+            position: relative;
+            width: 307px;
+            height: 192px;
+            background-color: rgba(0, 0, 0, .4);
+            display: none;
+        }
+
+        .image9 .bac .lan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -64.5px;
+            margin-left: -124.5px;
+            width: 249px;
+            height: 129px;
+            border: 2px solid #04e4f8;
+        }
+
+        .image9:hover .bac {
+            display: block;
+
+        }
+
+        .image9:hover {
+            cursor: pointer;
+        }
+        .image9 .j {
+            color: #434545;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .image9 .x {
+            font-size: 12px;
+            color: #434545;
+        }
+
+        .image9 .word {
+            position: absolute;
+            bottom: 26px;
+            text-align: left;
+            line-height: 1;
+        }
+
+        .dot {
+            position: relative;
+            width: 1200px;
+            height: 43px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 50px;
+
+        }
+
+        .dot a {
+            color: #838585;
+            font-size: 18px;
+        }
+
+        .dot .dian {
+            position: absolute;
+            top: 4px;
+            left: 615px;
+        }
+
+        .dot .more {
+            display: inline-block;
+            width: 89px;
+            height: 41px;
+            line-height: 41px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #c2c7cc;
+            margin-left: 40px;
+        }
+
+        .dot a:hover {
+            color: #6cebf9;
+        }
+
+        .dot .more:hover {
+            color: #ffffff;
+            background-color: #6cebf9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-c">
+            <div> <a href="../../慢旅.html" class="logo"></a>
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="../../慢旅.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../特别策划/index.html">特别策划</a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="">精品路线</a>
+                    <ul class="sub-nav">
+                        <li class="sub-item">
+                            <a href="../精品路线-定制团游/index.html">定制团体游</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="">领队自由行</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../关于我们/index.html">关于我们</a>
+                    <ul class=" sub-nav">
+                        <li class="sub-item">
+                            <a href="">企业理念</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="">品牌介绍</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../联系我们/index.html">联系我们</a>
+                    <ul class="sub-nav">
+                        <li class="sub-item">
+                            <a href="">在线咨询</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="">留言板块</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="main1-c">
+            <a href="" class="title">境外游</a>
+            <div class="img1">
+                <div class="image1">
+                    <div class="word">
+                        <span class="j">京都岚山深度 一日游</span> <br>
+                        <span class="x">寻找我们的风花雪月</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image2">
+                    <div class="word">
+                        <span class="j">东极岛 三日游</span> <br>
+                        <span class="x">后青春时代的海岛记忆</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+                <div class="image3">
+                    <div class="word">
+                        <span class="j">圣托里尼 两日游</span> <br>
+                        <span class="x">爱琴海最璀璨的一颗明珠</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main2">
+        <div class="main2-c">
+            <a href="" class="title">国内游</a>
+            <div class="img2">
+                <div class="image4">
+                    <div class="word">
+                        <span class="j">西北环线自驾游</span> <br>
+                        <span class="x">圆一场关于北方的梦</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image5">
+                    <div class="word">
+                        <span class="j">雪国之旅</span> <br>
+                        <span class="x">打开窗听雪落下的声音</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image6">
+                    <div class="word">
+                        <span class="j">东方夏威夷</span> <br>
+                        <span class="x">请到天涯海角来这里四季春常在</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="main3-c">
+            <a href="" class="title">省内游</a>
+            <div class="img3">
+                <div class="image7">
+                    <div class="word">
+                        <span class="j">神奇的梦幻乐园</span> <br>
+                        <span class="x">这是一场盛大的欢乐盛宴</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image8">
+                    <div class="word">
+                        <span class="j">银练挂天</span> <br>
+                        <span class="x">银丝飘动 珍珠串滑 置身其境 心旷神怡</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+                <div class="image9">
+                    <div class="word">
+                        <span class="j">十三朝古都</span> <br>
+                        <span class="x">中国牡丹花都</span>
+                    </div>
+                    <div class="bac">
+                        <div class="lan">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="dot">
+        <a href="" class="number">1</a>
+        <a href="" class="number">2</a>
+        <a href="" class="number">3</a>
+        <a href="" class="number">4</a>
+        <a href="" class="number">5</a>
+        <a href="" class="number">6</a>
+        <a href="" class="number">7</a>
+        <a href="" class="number">8</a>
+        <a href="" class="number">9</a>
+        <a href="" class="dian">...</a>
+        <a href="" class="more">MORE</a>
+
+    </div>
+    <div class="footer">
+        <div class="footer-c">
+            <div class="man">慢旅Slow Travle工作室</div>
+            <div class="xin">
+                <div>地点：中国河南省郑州市绿地新都汇</div>
+                <div class="add">邮编：1000000</div>
+                <div class="tel">电话：0392-23656504</div>
+                <div>邮箱：manlv@qq.com</div>
+            </div>
+            <div class="link">
+                <a href="" class="logo1"></a>
+                <a href="" class="logo2"></a>
+                <a href="" class="logo3"></a>
+            </div>
+            <span class="co">COPYRIGHT (©) 2018 mo004_2551 - 生活方式旅游类网站</span>
+            <div class="text">
+                <div class="name">
+                    <span>姓名</span>
+                    <input type="text" value="" class="xing">
+                </div>
+                <div class="post">
+                    <span>邮箱</span>
+                    <input type="text" value="" class="you">
+                </div>
+                <div class="phone">
+                    <span>电话</span>
+                    <input type="text" value="" class="dian">
+                </div>
+            </div>
+            <div class="content">
+                <span>内容</span>
+                <input type="text" value="" class="nei">
+            </div>
+            <div class="but">
+                <button><a href="">提交</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

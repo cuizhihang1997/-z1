@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <video src="../素材/小手拍拍.mp4" width="400" muted height="400" controls autoplay></video>
+
+    <!-- 同样，通过附加属性可以更友好的控制视频的播放
+	autoplay 自动播放
+	controls 是否显示默认播放控件
+	loop 循环播放
+	preload 预加载，同时设置了autoplay，此属性将失效
+	width 设置播放窗口宽度
+    height 设置播放窗口的高度 -->
+    <!-- muted 开启静音  视频自动播放就可以生效 -->
+    <audio src="../素材/小手拍拍.mp3" loop autoplay controls></audio>
+
+    <!-- 多浏览器解决方案 -->
+    <audio>
+        <source src="素材/小手拍拍.mp3">
+        <source src="素材/小手拍拍.wav">
+        <source src="素材/小手拍拍.ogg">
+    </audio>
+
+
+    <video controls>
+        <source src="素材/movie.ogg">
+        <source src="素材/movie.mp4">
+        <source src="素材/movie.webm">
+        您的浏览器不支持
+    </video>
+</body>
+
+</html>
